@@ -5,9 +5,83 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(221, 217, 217);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.searchBox{
+  position: relative;
+  text-align: center;
+  left: 50%;
+  margin-top: 60px;
+  margin-bottom: 20px;
+  transform: translate(-50%,-50%);
+  transition: all 1s;
+  width: 50px;
+  height: 50px;
+  background: white;
+  box-sizing: border-box;
+  border-radius: 25px;
+  border: 4px solid white;
+  padding: 5px;
+}
+
+input{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;;
+  height: 42.5px;
+  line-height: 30px;
+  outline: 0;
+  border: 0;
+  display: none;
+  font-size: 1em;
+  border-radius: 20px;
+  padding: 0 20px;
+}
+
+.fa{
+  box-sizing: border-box;
+  padding: 10px;
+  width: 42.5px;
+  height: 42.5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 50%;
+  color: #07051a;
+  text-align: center;
+  font-size: 1.2em;
+  transition: all 1s;
+}
+
+.searchBox:hover{
+  width: 300px;
+  cursor: pointer;
+}
+
+.searchBox:hover input{
+  display: block;
+}
+
+.searchBox:hover .fa{
+  background: #07051a;
+  color: white;
+}
+
+
+.allMoviesList{
+  display: flex;
+  flex-wrap: wrap;
+  overflow: scroll;
+  align-items: center;
+  margin: auto;
+  justify-content: center;
+}
+
+@media(max-width: 350px) {
+  .searchBox:hover{
+    width: 200px;
+    cursor: pointer;
+  }
 }

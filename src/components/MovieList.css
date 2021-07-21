@@ -1,0 +1,152 @@
+.movieList{
+    width: 250px;
+    margin: 15px;
+    cursor: pointer;
+    box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.24);
+    overflow: hidden;
+}
+.movieList:hover{
+    transform: translateY(-15px);
+    transition: transform 0.3s ease-in;
+}
+.movieList img{
+    max-width: 100%;
+}
+
+.movieList_info{
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+.fav_icon{
+    margin-top: 10px;
+}
+.movieList_info h3{
+    overflow: hidden;
+    font-size: 16px;
+}
+.movieList_body {
+    display: flex;
+    flex-direction: column;
+    margin: 70px;
+    background-color: white;
+    padding: 20px;
+    height: 72vh;
+    box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.24);
+    overflow: scroll;
+}
+
+.movieList_bodyHeader{
+    display: flex;
+    align-items:center;
+    border-bottom: 1px solid whitesmoke;
+    padding: 20px;
+    position: relative;
+}
+
+.language{
+    flex-direction: column;
+}
+.movieList_important {
+    color: #e8ab02 !important;
+}
+
+.movieList_bodyHeader > h2 {
+    font-weight: 400;
+    margin-right: 20px;
+}
+
+.movieList_bodyHeader > p {
+    font-weight: 400;
+    margin-right: 20px;
+}
+
+.movieList_message{
+    display: flex;
+    margin-top: 20px;
+}
+
+.movieList_message .text {
+    flex: 1;
+    padding: 10px;
+    margin-right: 20px;
+    margin-left: 20px;
+    overflow-wrap: break-word;
+}
+.movieList_message .img{
+    max-width: 250px;
+}
+.movieList_time{
+    position: absolute;
+    top: 24px;
+    right: 0;
+    font-size: 12px;
+    color: gray;
+}
+
+.movieList_body .btn{
+    max-width: 150px;
+    position: relative;
+    left: 50%;
+    background-color: #e7e7e7;
+    border: none;
+    border-radius: 20px;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.btn:hover{
+    transform: translateY(-15px);
+    transition: transform 0.3s ease-in;
+}
+
+@media(max-width: 900px) {
+    .movieList_message img{
+        margin: auto;
+        height: 300px;
+    }
+}
+
+@media(max-width: 720px) {
+    .movieList_body{
+        margin: 50px;
+        height: 80vh;
+    }
+    .movieList_bodyHeader {
+        display: flex;
+        flex-direction: column;
+    }
+    .movieList_time{
+        margin-top: -10px;
+    }
+    .movieList_message{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .movieList_message img{
+        margin: auto;
+        height: 300px;
+    }
+}
+
+@media(max-width: 350px) {
+    .movieList_body{
+        margin: 20px;
+        height: 80vh;
+    }
+    .movieList_message .text{
+        margin: -20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .btn{
+        margin-left: -70px;
+    }
+}
